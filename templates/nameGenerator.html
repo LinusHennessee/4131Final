@@ -12,18 +12,25 @@
         <form action="/band" method="post">
           {{ form.hidden_tag() }}
           {{ render_field(form.bandname) }}
-          <br>
+          <br><br>
           Primary Color:
+          <br>
           <div id="color-picker-container1"></div>
+          <br><br>
           Secondary Color:
+          <br>
           <div id="color-picker-container2"></div>
+          <br><br>
           {{ render_field(form.color1) }}
           {{ render_field(form.color2) }}
           {{ render_field(form.singer) }}
+          <br>
           {{ render_field(form.guitarist) }}
+          <br>
           {{ render_field(form.bassist) }}
+          <br>
           {{ render_field(form.drummer) }}
-          <br />
+          <br><br>
           {{form.submit()}}
         </form>
     </body>
