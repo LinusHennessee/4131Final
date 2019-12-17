@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/bandGenerator.css">
+        <script src="/static/bandPoster.js"></script>
+    </head>
+    <body>
+        <h1>Band Generator</h1>
+        <br>
+        <div id="poster" style="background: {{band.color1}}; border: 7px solid {{band.color2}}; width: 400px">
+          <h2 id="name" style="color: {{band.color2}}">{{band.name}}</h2>
+          <p id="singer" style="color: {{band.color2}}">Singer: {{band.singer}}</p>
+          <p id="guitar" style="color: {{band.color2}}">Guitarist: {{band.guitarist}}</p>
+          <p id="bass" style="color: {{band.color2}}">Bassist: {{band.bassist}}</p>
+          <p id="drummer" style="color: {{band.color2}}">Drummer: {{band.drummer}}</p>
+        </div>
+
+        {{ table }}
+    </body>
+</html>

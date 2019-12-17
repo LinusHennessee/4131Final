@@ -1,0 +1,14 @@
+td:nth-child(1){
+  visibility: hidden;
+}
+
+td:nth-child(n+3){
+  visibility: hidden;
+}
+th:nth-child(1){
+  visibility: hidden;
+}
+
+th:nth-child(n+3){
+  visibility: hidden;
+}

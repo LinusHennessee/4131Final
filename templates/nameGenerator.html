@@ -1,0 +1,27 @@
+<html>
+    <head>
+      <script src="https://cdn.jsdelivr.net/npm/@jaames/iro/dist/iro.min.js"></script>
+      <script src="/static/band.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="/static/bandGenerator.css">
+    </head>
+    <body onload="setColors()">
+      {% from "_formhelpers.html" import render_field %}
+        <h1>Band Generator</h1>
+        <br>
+        <form action="/band" method="post">
+          {{ form.hidden_tag() }}
+          {{ render_field(form.bandname) }}
+          <div id="color-picker-container1"></div>
+          <div id="color-picker-container2"></div>
+          {{ render_field(form.color1) }}
+          {{ render_field(form.color2) }}
+          {{ render_field(form.singer) }}
+          {{ render_field(form.guitarist) }}
+          {{ render_field(form.bassist) }}
+          {{ render_field(form.drummer) }}
+          <br />
+          {{form.submit()}}
+        </form>
+    </body>
+</html>
