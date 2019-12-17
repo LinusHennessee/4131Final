@@ -15,4 +15,25 @@ th:nth-child(n+3){
 
 table {
   float: right;
+  border: 2px solid black;
+}
+
+td {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 6px;
+}
+
+th {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border: 2px solid black;
+}
+
+body {
+  text-align: center;
+}
+
+div {
+  display: inline-block;
 }
