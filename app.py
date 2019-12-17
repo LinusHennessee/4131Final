@@ -5,7 +5,6 @@ from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField, HiddenField
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import desc
 from flask_table import Table, Col
 
 csrf = CSRFProtect()
@@ -76,7 +75,7 @@ def band():
     db.session.add(b)
     db.session.commit()
 
-    items = BandData.query.order_by(desc(id)).limit(15).all()
+    items = BandData.query.all()
     table = ItemTable(items)
 
     return render_template("displayBand.html", table=table, band=band)
