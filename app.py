@@ -75,7 +75,7 @@ def band():
     db.session.add(b)
     db.session.commit()
 
-    items = BandData.query.order_by(id.desc()).limit(15).all()
+    items = BandData.query.order_by(desc(id)).limit(15).all()
     table = ItemTable(items)
 
     return render_template("displayBand.html", table=table, band=band)
