@@ -48,10 +48,10 @@ class BandForm(FlaskForm):
     bandname = StringField("Band Name:")
     color1 = HiddenField("")
     color2 = HiddenField("")
-    singer = SelectField("Singer:", choices = [('0','a'),('1','b'),('2','c')])
-    guitarist = SelectField("Guitarist:", choices = [('3','d'),('4','e'),('5','f')])
-    bassist = SelectField("Bassist:", choices = [('6','g'),('7','h'),('8','i')])
-    drummer = SelectField("Drummer:", choices = [('9','j'),('10','k'),('11','l')])
+    singer = SelectField("Singer:", choices = [('Stevie Nicks','Stevie Nicks'),('Aretha Franklin','Aretha Franklin'),('David Byrne','David Byrne'),('James Brown','James Brown'),('Lana Del Rey','Lana Del Rey')])
+    guitarist = SelectField("Guitarist:", choices = [('Jimi Hendrix','Jimi Hendrix'),('Jerry Garcia','Jerry Garcia'),('Prince','Prince'),('Carlos Santana','Carlos Santana'),('Jimmy Page','Jimmy Page')])
+    bassist = SelectField("Bassist:", choices = [('Flea','Flea'),('Victor Wooten','Victor Wooten'),('Thundercat','Thundercat'),('Bootsy Collins','Bootsy Collins'),('Paul Mccartney','Paul Mccartney')])
+    drummer = SelectField("Drummer:", choices = [('Clyde Stubblefield','Clyde Stubblefield'),('Bernard Purdie','Bernard Purdie'),('John Bonham','John Bonham'),('Vinnie Colaiuta','Vinnie Colaiuta'),('Steve Gadd','Steve Gadd')])
     submit = SubmitField("Go")
 
 class ItemTable(Table):
@@ -83,3 +83,4 @@ def band():
     table = ItemTable(items)
 
     return render_template("displayBand.html", table=table, band=band)
+
