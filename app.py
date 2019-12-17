@@ -5,7 +5,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField, HiddenField
 from flask_sqlalchemy import SQLAlchemy
-from SQLAlchemy import desc
+from sqlalchemy import desc
 from flask_table import Table, Col
 
 csrf = CSRFProtect()
