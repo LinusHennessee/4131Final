@@ -4,10 +4,6 @@ import itertools
 from flask_wtf.csrf import CSRFProtect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField, HiddenField
-from wtforms.validators import Regexp
-from flask.json import jsonify
-import re
-import json
 from flask_sqlalchemy import SQLAlchemy
 from flask_table import Table, Col
 
@@ -79,8 +75,7 @@ def band():
     db.session.add(b)
     db.session.commit()
 
-    items = BandData.query.all()
+    items = BandData.query.order_by(id.desc()).limit(15).all()
     table = ItemTable(items)
 
     return render_template("displayBand.html", table=table, band=band)
-
